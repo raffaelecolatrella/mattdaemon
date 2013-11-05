@@ -168,7 +168,8 @@ class daemon:
 		"""
 		Restart the daemon
 		"""
-		self.stop()
+		if (self.status):
+			self.stop()
 		self.start()
 
 	def status(self):
